@@ -1,0 +1,179 @@
+header {
+    display: flex;
+    position: relative;
+    i {
+        position: absolute;
+        left: 20px;
+        top: 3.5vw;
+        font-size: 120%;
+        @include large-screen {
+            top: 2.4vw;
+        }
+    }
+}
+
+.top-image {
+    img {
+        @include image;
+        @include large-screen {
+            height: 45vw;
+        }
+    }
+}
+
+main {
+    position: relative;
+    top: -12vw;
+    margin-bottom: -12vw;
+    height: fit-content;
+    background: lighten($shadow, 20%);
+    border-radius: 40px 40px 0 0;    
+    padding: 0 20px;
+    .title {
+        display: flex;
+        font-family: map-get($font-family, title);
+        justify-content: left;
+        padding: 3vw 0 0 0;
+        i {
+            position: absolute;
+            font-size: 6vw;
+            z-index: 1;
+            right: 35px;
+            top: 8vw;
+            @include large-screen {
+                right: 6vw;
+                top: 6vw;
+            }
+        }       
+    }
+    .course {
+        margin: 30px 0 0 0;
+        h5 {
+            font-size: 4.5vw;
+            padding: 20px 0 2px 0;
+            @include large-screen {
+                font-size: 2.5vw;
+                padding-top: 0vw;
+            }
+            hr {
+                width: 48px;
+                height: 3px;
+                background-color: $tertiary;
+                border: none;
+                @include large-screen {
+                    width: 6.3vw;
+                }
+            }
+        }
+        .dish  {
+            opacity: 0;
+            position: relative;
+            margin: 20px 0;
+            @include figure;
+            background: white;
+            border-radius: 20px;
+            filter: drop-shadow(0px 2px 4px $shadow);
+            height: 18vw;
+            @include large-screen {
+                min-height: 8vw;
+                height: auto;
+                font-size: 60%;
+                width: 32%;
+                display: inline-block;
+                margin: 1vw 0.5vw;
+            }
+        }
+        h3 {
+            padding: 15px 0 3px 15px;
+        }
+        .description {
+            padding: 0 15px 15px 15px;
+            display: inline-block;
+            width:77.5%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: 400ms ease-in;
+            @include large-screen {
+                font-size: 1.5vw;
+                width: 65%;
+            }
+        }
+        .price {
+            padding: 0 25px 15px 0px;
+            float: right;
+            transition: 400ms ease-in;
+        }
+        .check-box {
+            position: absolute;
+            display: flex;
+            right: -18%;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: $tertiary;
+            font-size: 5vw;
+            color: white;
+            padding: 30% 6% 30% 6%;
+            @include large-screen {
+                right: -30%;
+                font-size: 2.5vw;
+            }
+            transition: 400ms ease-in;
+            i {
+                transition: 500ms ease-in;
+            }
+        }
+        .dish:hover {
+            position: relative;
+            cursor: pointer;
+            .description {
+                width: 60%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                transition: translateX(-20%,0);
+                @include large-screen {
+                    width: 40%;
+                }
+            }
+            .price {
+                padding-right: 20vw;
+                transition: translateX(-20%,0);
+                @include large-screen {
+                    padding-right: 8vw;
+                }
+            }
+            .check-box {
+                transform: translateX(-20%, 0);
+                right: 0%;
+                top: 50%;
+                i { /*get this spin to work on the tick itself! */
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    .entrees {
+        animation: fade-in 1200ms linear 1 forwards, move-up 1000ms linear 1 forwards;
+        animation-delay: 250ms;
+    }
+    .mains {
+        animation: fade-in 1200ms linear 1 forwards, move-up 1000ms linear 1 forwards;
+        animation-delay: 1500ms;
+    }
+    .desserts {
+        animation: fade-in 1200ms linear 1 forwards, move-up 1000ms linear 1 forwards;
+        animation-delay: 2750ms;
+    }
+    .order__btn {
+        width: 100%;
+        text-align: center;
+        @include large-screen {
+            margin-top: 4vw;
+        }
+        button {
+            padding: 15px 70px;
+            margin: 25px auto 60px auto;
+        }
+    }
+}
