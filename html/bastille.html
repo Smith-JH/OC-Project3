@@ -13,31 +13,98 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <img class="logo" src="images/logo/ohmyfood.png" alt="Oh my food Logo" title="OhMyFood">
-            <a class="back" href="../index.html"><i class="fas fa-arrow-left"></i></a>
-        </header>
-        <section class="main-image">
-            <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Two perfectly poached eggs rest atop a bed of spinach upon gently toasted bread." title="The Bastille">
-        </section>
-        <main>
-            <div class="title-bar">
-                <h1 class="title">The Bastille</h1>
-                <i class="far fa-heart"></i>
-            </div>
-            <h5 class="course">Entrees</h5>
-            <ul class="dishes">
-                <li class="dish">
-                    <p class="number">1</p><i class="fas fa-mobile-alt"></i><h6>Choose a resturant</h6>
-                </li>
-                <li class="instructions-list">
-                    <a href="#"><p class="number">2</p><i class="fas fa-list"></i><h6>Create your menu</h6></a>
-                </li>
-                <li class="instructions-list">
-                    <a href="#"><p class="number">3</p><i class="fas fa-store"></i><h6>Go enjoy it at the resturant</h6></a>
-                </li>
-            </ul>
-        </main>
+        <div class="wrapper">
+            <header>
+                <img class="logo" src="../images/logo/ohmyfood.png" alt="Oh my food Logo" title="OhMyFood">
+                <a class="back" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            </header>
+            <section class="top-image">
+                <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Two perfectly poached eggs rest atop a bed of spinach upon gently toasted bread." title="The Bastille">
+            </section>
+            <main>
+                <div class="title">
+                    <h1 class="title">The Bastille</h1>
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="course">
+                    <h5>ENTREES<hr></h5>
+                    <figure class="dish entrees">
+                        <h3>Citrus Squid Carpaccio</h3>
+                        <p class="description">With orange zest</p>
+                        <p class="price">25€</p>
+                        <span class="check-box"><i class="fas fa-check-circle"></i></span>
+                    </figure>
+                    <figure class="dish entrees">
+                        <h3>Grandmother's Vegetable Soup</h3>
+                        <p class="description">Carrots, parsnips, Jerusalem artichoke</p>
+                        <p class="price">35€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish entrees">
+                        <h3>Onion Soup</h3>
+                        <p class="description">Revisited</p>
+                        <p class="price">20€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                </div>
+                <div class="course">
+                    <h5>MAIN DISH<hr></h5>
+                    <figure class="dish mains">
+                        <h3>Scallops</h3>
+                        <p class="description">With mashed parsnip</p>
+                        <p class="price">40€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish mains">
+                        <h3>Magret de Canard</h3>
+                        <p class="description">With mashed potatoes</p>
+                        <p class="price">35€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish mains">
+                        <h3>Game Hen</h3>
+                        <p class="description">With vegetable gnocchis</p>
+                        <p class="price">44€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                </div>
+                <div class="course">
+                    <h5>DESSERTS<hr></h5>
+                    <figure class="dish desserts">
+                        <h3>Floral Ice Cream</h3>
+                        <p class="description">With Hazelnut butter</p>
+                        <p class="price">18€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish desserts">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p class="description">Revisited</p>
+                        <p class="price">22€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish desserts">
+                        <h3>Napolean</h3>
+                        <p class="description">With blueberries and marzipan</p>
+                        <p class="price">23€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                </div>    
+                <div class="order__btn">
+                    <button type="button"><a href="#">Order</a></button>
+                </div>             
+            </main>    
+            <footer>
+                <img class="footer__logo" src="../images/logo/ohmyfood.png" alt="Oh my food Logo" title="OhMyFood">
+                <ul>
+                    <li><a href="#"><i class="fas fa-utensils"></i>Suggest a resturant</a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping"></i>Become a partner</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="mailto:help-desk@ohmyfood.com">Contact</a></li>
+                </ul> 
+            </footer>
+        </div>
+    </body>
+</html>

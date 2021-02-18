@@ -13,19 +13,104 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <img class="logo" src="images/logo/ohmyfood.png" alt="Oh my food Logo" title="OhMyFood">
-            <a class="back" href="../index.html"><i class="fas fa-arrow-left"></i></a>
-        </header>
-        <section class="main-image">
-            <img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="A dish of chicken potatoes and olives in a tomato sauce, taken from above." title="The Enchanted Plate">
-        </section>
-        <main>
-            <div class="title-bar">
-                <h1 class="title">The Enchanted Plate</h1>
-                <i class="far fa-heart"></i>
-            </div>        
-        </main>
+        <div class="wrapper">
+            <header>
+                <img class="logo" src="../images/logo/ohmyfood.png" alt="Oh my food Logo" title="OhMyFood">
+                <a class="back" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            </header>
+            <section class="top-image">
+                <img id="resize" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="A dish of chicken potatoes and olives in a tomato sauce, taken from above." title="The Enchanted Plate">
+            </section>
+            <main>
+                <div class="title">
+                    <h1 class="title">The Enchanted Plate</h1>
+                    <i class="far fa-heart"></i>
+                </div>        
+                <div class="course">
+                    <h5>ENTREES<hr></h5>
+                    <figure class="dish entrees">
+                        <h3>Foie Gras Ravioli</h3>
+                        <p class="description">With truffle cream</p>
+                        <p class="price">25€</p>
+                        <span class="check-box"><i class="fas fa-check-circle"></i></span>
+                    </figure>
+                    <figure class="dish entrees">
+                        <h3>Oscietra Caviar</h3>
+                        <p class="description">With buckwheat blinis</p>
+                        <p class="price">35€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish entrees">
+                        <h3>Lobster and Leek Foam</h3>
+                        <p class="description">Marinated with orange zest</p>
+                        <p class="price">20€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish entrees">
+                        <h3>Duck Foie Gras</h3>
+                        <p class="description">With fig jam and grilled baguette</p>
+                        <p class="price">35€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                </div>
+                <div class="course">
+                    <h5>MAIN DISH<hr></h5>
+                    <figure class="dish mains">
+                        <h3>Fresh Buttered Scallops</h3>
+                        <p class="description">With white celery puree</p>
+                        <p class="price">40€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish mains">
+                        <h3>Pan-Fried Lobster</h3>
+                        <p class="description">With mashed sweet potatoes</p>
+                        <p class="price">35€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish mains">
+                        <h3>Braised Ox Tail</h3>
+                        <p class="description">With wild rice and lemon zest</p>
+                        <p class="price">44€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                </div>
+                <div class="course">
+                    <h5>DESSERTS<hr></h5>
+                    <figure class="dish desserts">
+                        <h3>Chocolate and Hazelnut Macaroons</h3>
+                        <p class="description">With caramel butter ice cream</p>
+                        <p class="price">18€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish desserts">
+                        <h3>Baba au rhum</h3>
+                        <p class="description">With lemon drizzle</p>
+                        <p class="price">22€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                    <figure class="dish desserts">
+                        <h3>Lemon Meringue Pie</h3>
+                        <p class="description">Destructured</p>
+                        <p class="price">23€</p>
+                        <div class="check-box"><i class="fas fa-check-circle"></i></div>
+                    </figure>
+                </div>    
+                <div class="order__btn">
+                    <button type="button"><a href="#">Order</a></button>
+                </div>             
+            </main>    
+            <footer>
+                <img class="footer__logo" src="../images/logo/ohmyfood.png" alt="Oh my food Logo" title="OhMyFood">
+                <ul>
+                    <li><a href="#"><i class="fas fa-utensils"></i>Suggest a resturant</a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping"></i>Become a partner</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="mailto:help-desk@ohmyfood.com">Contact</a></li>
+                </ul> 
+            </footer>
+        </div>
+    </body>
+</html>
