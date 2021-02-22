@@ -125,29 +125,23 @@ h6 {
   font-size: 18px;
 }
 
-button {
+.button {
   border: 0px;
-  border-radius: 30px;
+  border-radius: 45px;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-blend-mode: multiply;
   -webkit-filter: drop-shadow(6px 10px 10px #b4b4b4);
           filter: drop-shadow(6px 10px 10px #b4b4b4);
-}
-
-button a {
   color: white;
 }
 
-button:hover {
+.button:hover {
   cursor: pointer;
   background: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   -webkit-filter: drop-shadow(3px 3px 10px #747474);
           filter: drop-shadow(3px 3px 10px #747474);
-}
-
-button:hover a {
   color: #1a1a1a;
 }
 
@@ -301,10 +295,6 @@ footer li a:hover {
   text-align: center;
 }
 
-.explore__btn {
-  padding-bottom: 50px;
-}
-
 @media (min-width: 480px) {
   .explore h6 {
     font-size: 2.5vw;
@@ -312,19 +302,12 @@ footer li a:hover {
   }
 }
 
-.explore button {
+.explore__btn {
+  padding-bottom: 50px;
+}
+
+.explore__btn .button {
   padding: 15px 25px;
-}
-
-.explore button:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
-  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  -webkit-filter: drop-shadow(3px 3px 10px #747474);
-          filter: drop-shadow(3px 3px 10px #747474);
-}
-
-.explore button:hover a {
-  color: #1a1a1a;
 }
 
 .how-it-works {
@@ -437,6 +420,10 @@ footer li a:hover {
   }
 }
 
+.how-it-works .instructions__list a:hover i {
+  color: #9356DC;
+}
+
 .restaurants {
   background: #f0f0f0;
   padding-bottom: 30px;
@@ -447,7 +434,15 @@ footer li a:hover {
   padding: 40px 0 0 0;
 }
 
-.restaurants__fig {
+@media (min-width: 480px) {
+  .restaurants a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+.restaurants a .restaurants__fig {
   position: relative;
   margin: 20px;
   overflow: hidden;
@@ -460,22 +455,19 @@ footer li a:hover {
 }
 
 @media (min-width: 480px) {
-  .restaurants__fig {
+  .restaurants a .restaurants__fig {
     width: 289px;
     height: 250px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
   }
 }
 
-.restaurants__fig:hover {
+.restaurants a .restaurants__fig:hover {
   -webkit-filter: drop-shadow(3px 3px 10px #747474);
           filter: drop-shadow(3px 3px 10px #747474);
   font-size: 105%;
 }
 
-.restaurants__fig .new-tag {
+.restaurants a .restaurants__fig .new-tag {
   position: absolute;
   background: #99E2D0;
   border-radius: 3px;
@@ -488,18 +480,18 @@ footer li a:hover {
 }
 
 @media (min-width: 480px) {
-  .restaurants__fig .new-tag {
+  .restaurants a .restaurants__fig .new-tag {
     padding: 0 0.5vw;
     font-size: 75%;
   }
 }
 
-.restaurants__fig #adjust {
+.restaurants a .restaurants__fig #adjust {
   -o-object-position: 50% 61%;
      object-position: 50% 61%;
 }
 
-.restaurants__fig img {
+.restaurants a .restaurants__fig img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 100%;
@@ -509,26 +501,23 @@ footer li a:hover {
 }
 
 @media (min-width: 480px) {
-  .restaurants__fig img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    max-width: 100%;
+  .restaurants a .restaurants__fig img {
     margin-bottom: -0.4vw;
   }
 }
 
-.restaurants__fig figcaption {
+.restaurants a .restaurants__fig figcaption {
   position: relative;
   width: 100%;
   padding: 5px 0px 5px 0px;
 }
 
-.restaurants__fig figcaption .heart {
+.restaurants a .restaurants__fig figcaption .heart {
   float: right;
   margin: -30px 30px 0px 0;
 }
 
-.restaurants__fig figcaption .heart .heart {
+.restaurants a .restaurants__fig figcaption .heart .heart {
   height: 5vh;
   width: 5vw;
   display: inline-block;
@@ -536,7 +525,7 @@ footer li a:hover {
   margin: -30px 26.5px 0px 0;
 }
 
-.restaurants__fig figcaption .heart input[type="checkbox"] {
+.restaurants a .restaurants__fig figcaption .heart input[type="checkbox"] {
   height: 10px;
   width: 10px;
   -webkit-transform: rotate(45deg);
@@ -545,7 +534,7 @@ footer li a:hover {
   visibility: hidden;
 }
 
-.restaurants__fig figcaption .heart input[type="checkbox"]:before {
+.restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:before {
   visibility: visible;
   position: absolute;
   content: "";
@@ -560,7 +549,7 @@ footer li a:hover {
   border: black solid 2px;
 }
 
-.restaurants__fig figcaption .heart input[type="checkbox"]:after {
+.restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:after {
   visibility: visible;
   position: absolute;
   content: "";
@@ -580,53 +569,37 @@ footer li a:hover {
   border-top: black solid 2px;
 }
 
-.restaurants__fig figcaption .heart input[type="checkbox"]:hover, .restaurants__fig figcaption .heart input:hover[type="checkbox"]:before, .restaurants__fig figcaption .heart input:hover[type="checkbox"]:after {
+.restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:hover, .restaurants a .restaurants__fig figcaption .heart input:hover[type="checkbox"]:before, .restaurants a .restaurants__fig figcaption .heart input:hover[type="checkbox"]:after {
   -webkit-transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
   transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
   background-position: 100% 100%;
   cursor: pointer;
 }
 
-.restaurants__fig figcaption .heart input:hover[type="checkbox"]:after {
+.restaurants a .restaurants__fig figcaption .heart input:hover[type="checkbox"]:after {
   -webkit-transition-delay: 85ms;
           transition-delay: 85ms;
   background-color: #9356DC;
 }
 
-.restaurants__fig figcaption .heart input[type="checkbox"]:checked, .restaurants__fig figcaption .heart input:checked[type="checkbox"]:before, .restaurants__fig figcaption .heart input:checked[type="checkbox"]:after {
+.restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:checked, .restaurants a .restaurants__fig figcaption .heart input:checked[type="checkbox"]:before, .restaurants a .restaurants__fig figcaption .heart input:checked[type="checkbox"]:after {
   background-image: rgba(180, 180, 180, 0.2);
   background: -webkit-gradient(linear, right top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom left, #FF79DA, #9356DC);
 }
 
 @media (min-width: 480px) {
-  .restaurants__fig figcaption .heart {
+  .restaurants a .restaurants__fig figcaption .heart {
     margin-top: -55px;
   }
 }
 
-.restaurants__fig figcaption i {
-  display: none;
-  /*
-                bottom: 15px;
-                right: 20px;
-                position: absolute;
-                font-size: 25px;
-                font-weight: map-get($font-weight, normal);
-                color: linear-gradient(0deg, $primary, $primary 50%, white 50%);
-                &:hover {
-                    transition: all 1000ms ease-out;
-                    font-weight: map-get($font-weight, bold);
-                    color: yellow;
-                } */
-}
-
-.restaurants__fig figcaption h4, .restaurants__fig figcaption p {
+.restaurants a .restaurants__fig figcaption h4, .restaurants a .restaurants__fig figcaption p {
   padding: 2px 0px 2px 15px;
 }
 
 @media (min-width: 480px) {
-  .restaurants__fig figcaption h4, .restaurants__fig figcaption p {
+  .restaurants a .restaurants__fig figcaption h4, .restaurants a .restaurants__fig figcaption p {
     font-size: 45%;
     padding: 0 0 0 1.5vw;
   }
@@ -692,11 +665,11 @@ header i {
 
 main {
   position: relative;
-  top: -12vw;
-  margin-bottom: -12vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  top: -12vw;
+  margin-bottom: -12vw;
   background: #e7e7e7;
   border-radius: 40px 40px 0 0;
   padding: 0 20px;
@@ -713,18 +686,152 @@ main .title {
   padding: 3vw 0 0 0;
 }
 
-main .title i {
+main .title .heart {
   position: absolute;
-  font-size: 6vw;
-  z-index: 1;
-  right: 35px;
-  top: 8vw;
+  right: 9vw;
+  top: 8.5vw;
+}
+
+main .title .heart .heart {
+  height: 5vh;
+  width: 5vw;
+  display: inline-block;
+  position: relative;
+  margin: -30px 26.5px 0px 0;
+}
+
+main .title .heart input[type="checkbox"] {
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  visibility: hidden;
+}
+
+main .title .heart input[type="checkbox"]:before {
+  visibility: visible;
+  position: absolute;
+  content: "";
+  height: 163%;
+  width: 100%;
+  top: -72%;
+  left: -8%;
+  border-radius: 75px 75px 0 0;
+  background-image: linear-gradient(-45deg, #9356DC 50%, white 50%);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  border: black solid 2px;
+}
+
+main .title .heart input[type="checkbox"]:after {
+  visibility: visible;
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  height: 66%;
+  width: 98%;
+  top: 15%;
+  right: 60%;
+  border-radius: 75px 75px 0 0;
+  background-color: white;
+  background-image: linear-gradient(45deg, #9356DC 50%, white 50%);
+  background-size: 200% 500%;
+  background-position: 0% 0%;
+  border-left: black solid 2px;
+  border-right: black solid 2px;
+  border-top: black solid 2px;
+}
+
+main .title .heart input[type="checkbox"]:hover, main .title .heart input:hover[type="checkbox"]:before, main .title .heart input:hover[type="checkbox"]:after {
+  -webkit-transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
+  transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
+  background-position: 100% 100%;
+  cursor: pointer;
+}
+
+main .title .heart input:hover[type="checkbox"]:after {
+  -webkit-transition-delay: 85ms;
+          transition-delay: 85ms;
+  background-color: #9356DC;
+}
+
+main .title .heart input[type="checkbox"]:checked, main .title .heart input:checked[type="checkbox"]:before, main .title .heart input:checked[type="checkbox"]:after {
+  background-image: rgba(180, 180, 180, 0.2);
+  background: -webkit-gradient(linear, right top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom left, #FF79DA, #9356DC);
 }
 
 @media (min-width: 480px) {
-  main .title i {
-    right: 6vw;
-    top: 6vw;
+  main .title .heart .heart {
+    height: 5vh;
+    width: 5vw;
+    display: inline-block;
+    position: relative;
+    margin: -30px 26.5px 0px 0;
+  }
+  main .title .heart input[type="checkbox"] {
+    height: 28px;
+    width: 28px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    visibility: hidden;
+  }
+  main .title .heart input[type="checkbox"]:before {
+    visibility: visible;
+    position: absolute;
+    content: "";
+    height: 163%;
+    width: 100%;
+    top: -72%;
+    left: -8%;
+    border-radius: 75px 75px 0 0;
+    background-image: linear-gradient(-45deg, #9356DC 50%, white 50%);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    border: black solid 2px;
+  }
+  main .title .heart input[type="checkbox"]:after {
+    visibility: visible;
+    position: absolute;
+    content: "";
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    height: 66%;
+    width: 98%;
+    top: 15%;
+    right: 60%;
+    border-radius: 75px 75px 0 0;
+    background-color: white;
+    background-image: linear-gradient(45deg, #9356DC 50%, white 50%);
+    background-size: 200% 500%;
+    background-position: 0% 0%;
+    border-left: black solid 2px;
+    border-right: black solid 2px;
+    border-top: black solid 2px;
+  }
+  main .title .heart input[type="checkbox"]:hover, main .title .heart input:hover[type="checkbox"]:before, main .title .heart input:hover[type="checkbox"]:after {
+    -webkit-transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
+    transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
+    background-position: 100% 100%;
+    cursor: pointer;
+  }
+  main .title .heart input:hover[type="checkbox"]:after {
+    -webkit-transition-delay: 85ms;
+            transition-delay: 85ms;
+    background-color: #9356DC;
+  }
+  main .title .heart input[type="checkbox"]:checked, main .title .heart input:checked[type="checkbox"]:before, main .title .heart input:checked[type="checkbox"]:after {
+    background-image: rgba(180, 180, 180, 0.2);
+    background: -webkit-gradient(linear, right top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(to bottom left, #FF79DA, #9356DC);
+  }
+  main .title .heart input[type="checkbox"]:after {
+    right: 78%;
+    top: 13%;
+    height: 64%;
   }
 }
 
@@ -908,16 +1015,17 @@ main .desserts {
 main .order__btn {
   width: 100%;
   text-align: center;
+  padding: 8vw 0 18vw 0;
 }
 
 @media (min-width: 480px) {
   main .order__btn {
-    margin-top: 4vw;
+    padding: 6vw 0 10vw 0;
   }
 }
 
-main .order__btn button {
-  padding: 15px 70px;
+main .order__btn .button {
+  padding: 15px 75px;
   margin: 25px auto 60px auto;
 }
 /*# sourceMappingURL=style.css.map */

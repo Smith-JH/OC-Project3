@@ -48,22 +48,18 @@ h6 {
     font-size: 18px;
 }
 
-button {
+.button {
     border: 0px;
-    border-radius: 30px;
+    border-radius: 45px;
     background: linear-gradient(to bottom right, $secondary, $primary);
     background-blend-mode: multiply;
     filter: drop-shadow(6px 10px 10px $shadow);
-    a {
-        color: white;
-    }
+    color: white;
     &:hover {
         cursor: pointer;
         background: linear-gradient(to bottom right, lighten($secondary, 5%), lighten($primary, 5%));
         filter: drop-shadow(3px 3px 10px darken($shadow, 25%));
-        a {
-            color: darken(white, 90%);
-        }
+        color: darken(white, 90%);
     }
 }
 

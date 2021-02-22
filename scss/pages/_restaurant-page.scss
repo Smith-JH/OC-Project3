@@ -27,9 +27,9 @@ header {
 
 main {
     position: relative;
+    height: fit-content;
     top: -12vw;
     margin-bottom: -12vw;
-    height: fit-content;
     background: lighten($shadow, 20%);
     border-radius: 40px 40px 0 0;    
     padding: 0 20px;
@@ -38,16 +38,19 @@ main {
         font-family: map-get($font-family, title);
         justify-content: left;
         padding: 3vw 0 0 0;
-        i {
+        .heart {
+            @include heart-checkbox(10px, 10px);
             position: absolute;
-            font-size: 6vw;
-            z-index: 1;
-            right: 35px;
-            top: 8vw;
+            right: 9vw;
+            top: 8.5vw;
             @include large-screen {
-                right: 6vw;
-                top: 6vw;
-            }
+                @include heart-checkbox(28px, 28px)
+                input[type="checkbox"]:after {
+                    right: 78%;
+                    top: 13%;
+                    height: 64%;
+                }
+            }    
         }       
     }
     .course {
@@ -172,11 +175,12 @@ main {
     .order__btn {
         width: 100%;
         text-align: center;
+        padding: 8vw 0 18vw 0;
         @include large-screen {
-            margin-top: 4vw;
+            padding: 6vw 0 10vw 0;
         }
-        button {
-            padding: 15px 70px;
+        .button {
+            padding: 15px 75px;
             margin: 25px auto 60px auto;
         }
     }
