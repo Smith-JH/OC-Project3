@@ -17,23 +17,16 @@
         margin: 35px auto;
         text-align: center;
     }
-    &__btn {
-        padding-bottom: 50px;
-    }
     h6 {
         @include large-screen {
             font-size: 2.5vw;
             padding: 1.25vw;
         }
     }
-    button {
-        padding: 15px 25px;
-        &:hover {
-            background: linear-gradient(to bottom right, lighten($secondary, 5%), lighten($primary, 5%));
-            filter: drop-shadow(3px 3px 10px darken($shadow, 25%));
-            a {
-                color: darken(white, 90%);
-            }
+    &__btn {
+        padding-bottom: 50px;
+        .button {
+            padding: 15px 25px;
         }
     }
 }
@@ -100,6 +93,11 @@
                         font-size: 1.9vw;
                     }
                 }
+                &:hover {
+                    i {
+                        color: $primary;
+                    }
+                }
             }
         }
     }
@@ -112,85 +110,73 @@
         margin: 0 20px;
         padding: 40px 0 0 0;
     }
-    &__fig {
-        position: relative;
-        margin: 20px;
-        @include figure;
-        background: white;
-        border-radius: 20px;
-        height: 275px;
-        filter: drop-shadow(0px 2px 4px $shadow);
+    a {
         @include large-screen {
-            width: 289px;
-            height: 250px;
             display: inline-flex;
         }
-        &:hover {
-            filter: drop-shadow(3px 3px 10px darken($shadow, 25%));
-            font-size: 105%;
-        }
-        .new-tag {
-            position: absolute;
-            background: $tertiary;
-            border-radius: 3px;
-            z-index: 1;
-            color: darken($tertiary, 45%);
-            font-weight: map-get($font-weight, medium);
-            top: 15px;
-            right: 15px;
-            padding: 6px 28px;
-            @include large-screen {
-                padding: 0 0.5vw;
-                font-size: 75%;
-            }
-        }
-        #adjust {
-            object-position: 50% 61%;
-        }
-        img {
-            @include image;
-            @include large-screen {
-                object-fit: cover;
-                max-width: 100%;
-                margin-bottom: -0.4vw;
-            }
-        }
-        figcaption {
+        .restaurants__fig {
             position: relative;
-            width: 100%;
-            padding: 5px 0px 5px 0px;
-            .heart {
-                @include heart-checkbox(10px, 10px);
-                float: right;
-                margin: -30px 30px 0px 0;
+            margin: 20px;
+            @include figure;
+            background: white;
+            border-radius: 20px;
+            height: 275px;
+            filter: drop-shadow(0px 2px 4px $shadow);
+            @include large-screen {
+                width: 289px;
+                height: 250px;
+            }
+            &:hover {
+                filter: drop-shadow(3px 3px 10px darken($shadow, 25%));
+                font-size: 105%;
+            }
+            .new-tag {
+                position: absolute;
+                background: $tertiary;
+                border-radius: 3px;
+                z-index: 1;
+                color: darken($tertiary, 45%);
+                font-weight: map-get($font-weight, medium);
+                top: 15px;
+                right: 15px;
+                padding: 6px 28px;
                 @include large-screen {
-                    margin-top: -55px; 
+                    padding: 0 0.5vw;
+                    font-size: 75%;
                 }
             }
-            i {
-                display: none; /*
-                bottom: 15px;
-                right: 20px;
-                position: absolute;
-                font-size: 25px;
-                font-weight: map-get($font-weight, normal);
-                color: linear-gradient(0deg, $primary, $primary 50%, white 50%);
-                &:hover {
-                    transition: all 1000ms ease-out;
-                    font-weight: map-get($font-weight, bold);
-                    color: yellow;
-                } */
-            } 
-            h4, p {
-                padding: 2px 0px 2px 15px;
+            #adjust {
+                object-position: 50% 61%;
+            }
+            img {
+                @include image;
                 @include large-screen {
-                    font-size: 45%;
-                    padding: 0 0 0 1.5vw;
+                    margin-bottom: -0.4vw;
+                }
+            }
+            figcaption {
+                position: relative;
+                width: 100%;
+                padding: 5px 0px 5px 0px;
+                .heart {
+                    @include heart-checkbox(10px, 10px);
+                    float: right;
+                    margin: -30px 30px 0px 0;
+                    @include large-screen {
+                        margin-top: -55px; 
+                    }
+                }
+                h4, p {
+                    padding: 2px 0px 2px 15px;
+                    @include large-screen {
+                        font-size: 45%;
+                        padding: 0 0 0 1.5vw;
+                    }
                 }
             }
         }
     }
-}
+}    
 
 #load-delay {
     opacity: 0;
