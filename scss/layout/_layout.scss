@@ -1,0 +1,123 @@
+a, p, h2, h3, h4, h6 {
+    @include large-screen {
+        font-size: 250%;
+    }
+}
+
+a {
+    color: black;
+}
+
+p {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, regular);
+}
+
+h1 {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, regular);
+    font-size: 7vw;
+    @include large-screen {
+        font-size: 5vw;
+    }
+}
+
+h2 {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, bold);
+}
+
+h3 {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, bold);
+}
+
+h4 {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, medium);
+}
+
+h5 {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, regular);
+}
+
+h6 {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, thin);
+    font-size: 18px;
+}
+
+.button {
+    border: 0px;
+    border-radius: 45px;
+    background: linear-gradient(to bottom right, $secondary, $primary);
+    background-blend-mode: multiply;
+    filter: drop-shadow(6px 10px 10px $shadow);
+    color: white;
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(to bottom right, lighten($secondary, 5%), lighten($primary, 5%));
+        filter: drop-shadow(3px 3px 10px darken($shadow, 25%));
+        color: darken(white, 90%);
+    }
+}
+
+.price {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, medium);
+}
+
+.description {
+    font-family: map-get($font-family, text);
+    font-weight: map-get($font-weight, regular);
+    font-size: 3.7vw;
+}
+
+header {
+    .logo {
+        @include flexCenter(row);
+        width: 40vw;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}
+
+footer {
+    background: darken($shadow, 55%);
+    padding: 15px 0 35px 0;
+    .footer__logo {
+        @include flexCenter(row);
+        margin: 0 20px;
+        width: 24vw;
+        padding: 10px 0;
+        filter: invert(100%);
+        @include large-screen {
+            width: 12vw
+        } 
+    }
+    li {
+        display: flex;
+        margin: 6px 20px;
+        @include large-screen {
+            margin: 15px 20px;
+        }
+        a {
+            color: white;
+            @include large-screen {
+                font-size: 120%;
+            }
+            i {
+                padding-right: 2vw;
+                font-size: 2.75vw;
+                @include large-screen {
+                    font-size: 100%;
+                    padding-right: 0.8vw;
+                }
+            }
+        &:hover {
+            font-size: 126%;
+        }    
+        }
+    }
+}

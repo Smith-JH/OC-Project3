@@ -1,0 +1,194 @@
+.explore {
+    background: rgb(240, 240, 240);
+    &__location {
+        @include flexCenter(row);
+        background: rgb(227, 227, 227);
+        border-top: 2px solid rgb(200, 200, 200);
+        padding: 14px;
+        p {
+            font-weight: map-get($font-weight, medium);
+        }
+        i {
+            padding-right: 12px;
+        }
+    }
+    h2, h6, &__btn {
+        @include flexCenter(row);
+        margin: 35px auto;
+        text-align: center;
+    }
+    h6 {
+        @include large-screen {
+            font-size: 2.5vw;
+            padding: 1.25vw;
+        }
+    }
+    &__btn {
+        padding-bottom: 50px;
+        .button {
+            padding: 15px 25px;
+        }
+    }
+}
+
+.how-it-works {
+    margin: 0 20px 50px 20px;
+    h2 {
+        padding-bottom: 15px;
+    }
+    .instructions {
+        &__list {
+            @include large-screen {
+                display: inline-flex;
+                width: auto;
+            }
+            display: flex;
+            padding: 15px 0;
+            position: relative;
+            .number {
+                @include flexCenter(row);
+                align-self: center;
+                color: white;
+                background: $primary;
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+                font-size: 15px;
+                font-weight: map-get($font-weight, medium);
+                position: absolute;
+                z-index: 1;
+                @include large-screen {
+                    width: 3vw;
+                    height: 3vw;
+                    font-size: 2vw;
+                }
+            }
+            a {
+                @include large-screen {
+                    width: auto;
+                    height: 8vw;
+                }
+                width: fill;    
+                display: flex;
+                align-items: center;
+                height: 70px;
+                background: rgb(240, 240, 240);
+                filter: drop-shadow(0px 2px 4px $shadow);
+                border-radius: 20px;
+                margin: 0 14px;
+                i {
+                    padding: 0 25px 0 35px;
+                    color: rgb(130, 130, 130);
+                    font-size: 22px;
+                    @include large-screen {
+                        font-size: 3vw;
+                        padding: 0 1.5vw 0 3.5vw;
+                    }
+                }
+                h6 {
+                    color: black;
+                    font-weight: map-get($font-weight, medium);
+                    @include large-screen {
+                        padding: 0 1.5vw 0 0;
+                        font-size: 1.9vw;
+                    }
+                }
+                &:hover {
+                    i {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.restaurants {
+    background: rgba(240, 240, 240,1);
+    padding-bottom: 30px;
+    h2 {
+        margin: 0 20px;
+        padding: 40px 0 0 0;
+    }
+    a {
+        @include large-screen {
+            display: inline-flex;
+        }
+        .restaurants__fig {
+            position: relative;
+            margin: 20px;
+            @include figure;
+            background: white;
+            border-radius: 20px;
+            height: 275px;
+            filter: drop-shadow(0px 2px 4px $shadow);
+            @include large-screen {
+                width: 289px;
+                height: 250px;
+            }
+            &:hover {
+                filter: drop-shadow(3px 3px 10px darken($shadow, 25%));
+                font-size: 105%;
+            }
+            .new-tag {
+                position: absolute;
+                background: $tertiary;
+                border-radius: 3px;
+                z-index: 1;
+                color: darken($tertiary, 45%);
+                font-weight: map-get($font-weight, medium);
+                top: 15px;
+                right: 15px;
+                padding: 6px 28px;
+                @include large-screen {
+                    padding: 0 0.5vw;
+                    font-size: 75%;
+                }
+            }
+            #adjust {
+                object-position: 50% 61%;
+            }
+            img {
+                @include image;
+                @include large-screen {
+                    margin-bottom: -0.4vw;
+                }
+            }
+            figcaption {
+                position: relative;
+                width: 100%;
+                padding: 5px 0px 5px 0px;
+                .heart {
+                    @include heart-checkbox(10px, 10px);
+                    float: right;
+                    margin: -30px 30px 0px 0;
+                    @include large-screen {
+                        margin-top: -55px; 
+                    }
+                }
+                h4, p {
+                    padding: 2px 0px 2px 15px;
+                    @include large-screen {
+                        font-size: 45%;
+                        padding: 0 0 0 1.5vw;
+                    }
+                }
+            }
+        }
+    }
+}    
+
+#load-delay {
+    opacity: 0;
+    animation: fade-in 10ms linear 1 forwards;
+    animation-delay: 3000ms;
+}
+
+.loading-spinner {
+    position: fixed;
+    color: $tertiary;
+    top: 30%;
+    left: 44%;
+    font-size: 20vw;
+    animation: fade-in 3200ms reverse 1 forwards, spin 900ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 30 alternate;
+}
