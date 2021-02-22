@@ -44,7 +44,7 @@ main {
             right: 9vw;
             top: 8.5vw;
             @include large-screen {
-                @include heart-checkbox(28px, 28px)
+                @include heart-checkbox(28px, 28px);
                 input[type="checkbox"]:after {
                     right: 78%;
                     top: 13%;
