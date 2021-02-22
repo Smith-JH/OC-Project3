@@ -46,6 +46,7 @@
         transform: rotate(45deg);
         position: relative;
         visibility: hidden;
+        -moz-appearance:initial;
     }
     input[type="checkbox"]:before{
         visibility: visible;
@@ -60,6 +61,7 @@
         background-size: 200% 200%;
         background-position: 0% 0%;
         border: black solid 2px;
+        -moz-appearance:initial;
     }
     input[type="checkbox"]:after{
         visibility: visible;
@@ -78,6 +80,7 @@
         border-left: black solid 2px;
         border-right: black solid 2px;
         border-top: black solid 2px;
+        -moz-appearance:initial;
     }
     input[type="checkbox"]:hover, input:hover[type="checkbox"]:before, input:hover[type="checkbox"]:after {
         transition: background 600ms cubic-bezier(0.000, 0.000, 0.230, 1);

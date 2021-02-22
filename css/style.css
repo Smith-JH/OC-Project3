@@ -532,6 +532,7 @@ footer li a:hover {
           transform: rotate(45deg);
   position: relative;
   visibility: hidden;
+  -moz-appearance: initial;
 }
 
 .restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:before {
@@ -547,6 +548,7 @@ footer li a:hover {
   background-size: 200% 200%;
   background-position: 0% 0%;
   border: black solid 2px;
+  -moz-appearance: initial;
 }
 
 .restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:after {
@@ -567,6 +569,7 @@ footer li a:hover {
   border-left: black solid 2px;
   border-right: black solid 2px;
   border-top: black solid 2px;
+  -moz-appearance: initial;
 }
 
 .restaurants a .restaurants__fig figcaption .heart input[type="checkbox"]:hover, .restaurants a .restaurants__fig figcaption .heart input:hover[type="checkbox"]:before, .restaurants a .restaurants__fig figcaption .heart input:hover[type="checkbox"]:after {
@@ -707,6 +710,7 @@ main .title .heart input[type="checkbox"] {
           transform: rotate(45deg);
   position: relative;
   visibility: hidden;
+  -moz-appearance: initial;
 }
 
 main .title .heart input[type="checkbox"]:before {
@@ -722,6 +726,7 @@ main .title .heart input[type="checkbox"]:before {
   background-size: 200% 200%;
   background-position: 0% 0%;
   border: black solid 2px;
+  -moz-appearance: initial;
 }
 
 main .title .heart input[type="checkbox"]:after {
@@ -742,6 +747,7 @@ main .title .heart input[type="checkbox"]:after {
   border-left: black solid 2px;
   border-right: black solid 2px;
   border-top: black solid 2px;
+  -moz-appearance: initial;
 }
 
 main .title .heart input[type="checkbox"]:hover, main .title .heart input:hover[type="checkbox"]:before, main .title .heart input:hover[type="checkbox"]:after {
@@ -778,6 +784,7 @@ main .title .heart input[type="checkbox"]:checked, main .title .heart input:chec
             transform: rotate(45deg);
     position: relative;
     visibility: hidden;
+    -moz-appearance: initial;
   }
   main .title .heart input[type="checkbox"]:before {
     visibility: visible;
@@ -792,6 +799,7 @@ main .title .heart input[type="checkbox"]:checked, main .title .heart input:chec
     background-size: 200% 200%;
     background-position: 0% 0%;
     border: black solid 2px;
+    -moz-appearance: initial;
   }
   main .title .heart input[type="checkbox"]:after {
     visibility: visible;
@@ -811,6 +819,7 @@ main .title .heart input[type="checkbox"]:checked, main .title .heart input:chec
     border-left: black solid 2px;
     border-right: black solid 2px;
     border-top: black solid 2px;
+    -moz-appearance: initial;
   }
   main .title .heart input[type="checkbox"]:hover, main .title .heart input:hover[type="checkbox"]:before, main .title .heart input:hover[type="checkbox"]:after {
     -webkit-transition: background 600ms cubic-bezier(0, 0, 0.23, 1);
